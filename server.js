@@ -14,11 +14,14 @@ hbs.registerPartials(__dirname + '/vistas/parciales');
 
 app.get('/', (req, res) => {
     res.render('home', {
-        nombre: 'NELSON'
+        nombre: 'NELSON',
+        titulo: 'HOME'
     });
 });
 app.get('/about', (req, res) => {
-    res.render('about');
+    res.render('about', {
+        titulo: 'Acerca de'
+    });
 });
 // app.get('/home.html', (req, res) => {
 //     res.send('Se invoca el HOME');
